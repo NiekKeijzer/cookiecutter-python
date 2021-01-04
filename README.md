@@ -1,6 +1,6 @@
 # Cookiecutter Python
 
-Why another cookiecutter template? I didn't like the other ones. ¯\_(ツ)_/¯
+Why another cookiecutter template? I didn't like the other ones. ¯\\\_(ツ)_/¯
 
 ## Usage
 
