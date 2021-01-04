@@ -15,7 +15,9 @@ isort = { version = "^4.3.0" , extras = ['toml']}
 seed-isort-config = "^2.1.0"
 
 # Testing
-pytest = "^5.2"
+pytest = "^6.2"
+pytest-cov = "^2.10.1"
+pytest-dotenv = "^0.5.2"
 
 [tool.black]
 line-length = 88
