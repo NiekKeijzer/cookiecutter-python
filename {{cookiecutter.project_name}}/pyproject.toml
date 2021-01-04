@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "python-template"
+name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
-description = ""
-authors = ["Niek Keijzer <niek@qabana.nl>"]
+description = "{{ cookiecutter.project_description }}"
+authors = []
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -19,7 +19,7 @@ pytest = "^5.2"
 
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ["py38"]
 exclude = '''
 (
   /(
