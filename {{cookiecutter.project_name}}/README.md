@@ -1,8 +1,10 @@
-# python-template
+# {{ cookiecutter.project_name }}
+
+{{ cookiecutter.project_description }}
 
 ## Usage
 
 ```shell
 poetry install
-python python_template
+python {{ cookiecutter.project_name.lower().replace('-', '_') }}
 ```
