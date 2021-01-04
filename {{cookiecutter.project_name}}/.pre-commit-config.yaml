@@ -3,9 +3,9 @@ repos:
     rev: stable
     hooks:
       - id: black
-        language_version: python3.8
+        language_version: python3
   - repo: https://github.com/asottile/seed-isort-config
-    rev: v2.1.0
+    rev: v2.2.0
     hooks:
       - id: seed-isort-config
   - repo: https://github.com/timothycrosley/isort
@@ -15,9 +15,3 @@ repos:
         files: ".+[.]py"
         additional_dependencies:
           - toml
-  - repo: https://github.com/thibaudcolas/curlylint
-    rev: "" # select a tag / sha to point at
-    types: [ file ] # restore the default `types` matching
-    files: \.html$
-    hooks:
-      - id: curlylint

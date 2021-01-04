@@ -9,7 +9,36 @@ python = "^3.9"
 toml = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
+# Formatting
+black = "^19.10b0"
+isort = { version = "^4.3.0" , extras = ['toml']}
+seed-isort-config = "^2.1.0"
+
+# Testing
 pytest = "^5.2"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.mypy_cache
+    | \.venv
+  )/
+)
+'''
+
+[tool.isort]
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+combine_as_imports = true
+known_third_party = ["pytest"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
