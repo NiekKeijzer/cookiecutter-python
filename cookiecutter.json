@@ -1,7 +1,7 @@
 {
   "project_name": "demo",
-  "organization": "burrow.cloud",
+  "organization": "burrow",
   "project_description": "This is how python package should look like!",
-
-  "license": "Proprietary"
+  "license": "Proprietary",
+  "create_repo": "y"
 }

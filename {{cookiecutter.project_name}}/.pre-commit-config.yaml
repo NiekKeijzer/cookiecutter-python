@@ -22,9 +22,11 @@ repos:
     rev: 1.7.0
     hooks:
       - id: bandit
+        exclude: ^tests/
 
   - repo: https://github.com/econchick/interrogate
     rev: 1.3.2
     hooks:
       - id: interrogate
-        args: [--quiet]
+        exclude: __init__.py
+        args: [-vv, --fail-under=95]

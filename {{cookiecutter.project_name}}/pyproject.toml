@@ -46,7 +46,7 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 combine_as_imports = true
-known_third_party = ["pytest"]
+known_third_party = ["toml"]
 
 [tool.vulture]
 min_confidence = 8
@@ -57,7 +57,6 @@ paths = ["demo", ]
 [tool.interrogate]
 ignore-init-module = true
 fail-under = 95
-verbose = 2
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

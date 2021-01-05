@@ -18,7 +18,7 @@ def get_version() -> str:
     pyproject_file = PROJECT_DIRECTORY / "pyproject.toml"
     pyproject = toml.load(pyproject_file.open())
 
-    return str(pyproject['tool']['poetry']['version'])
+    return str(pyproject["tool"]["poetry"]["version"])
 
 
 __version__ = get_version()
