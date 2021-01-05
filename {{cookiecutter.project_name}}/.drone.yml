@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: test backend
+    image: python3.9-slim
+    commands:
+      - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | POETRY_HOME=/opt/poetry python
+      - /opt/poetry/bin/poetry config virtualenvs.create false
+      - /opt/poetry/bin/poetry install
+      - /opt/poetry/bin/poetry run black {{cookiecutter.project_name.lower().replace('-', '_')}} --check
+      - /opt/poetry/bin/poetry run pytest
+      - /opt/poetry/bin/poetry run bandit -r {{cookiecutter.project_name.lower().replace('-', '_')}} -x tests
+      - /opt/poetry/bin/poetry run mypy {{cookiecutter.project_name.lower().replace('-', '_')}}
+      - /opt/poetry/bin/poetry run interrogate
