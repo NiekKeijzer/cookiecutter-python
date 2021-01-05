@@ -1,8 +1,16 @@
+"""
+Entrypoint to the application, makes sure the application is booted
+ shutdown correctly.
+"""
+
 import sys
 
 
 def main() -> int:
-    # Your project starts here
+    """
+    Entrypoint to the application, returns the program's
+     exit code as an integer
+    """
 
     return 0
 

@@ -19,6 +19,12 @@ pytest = "^6.2"
 pytest-cov = "^2.10.1"
 pytest-dotenv = "^0.5.2"
 
+# Static analysis
+mypy = "^0.790"
+bandit = "^1.7.0"
+vulture = "2.1"
+interrogate = "^1.3.2"
+
 [tool.black]
 line-length = 88
 target-version = ["py38"]
@@ -41,6 +47,17 @@ force_grid_wrap = 0
 use_parentheses = true
 combine_as_imports = true
 known_third_party = ["pytest"]
+
+[tool.vulture]
+min_confidence = 8
+sort_by_size = true
+exclude = ["constants.py", "__init__.py"]
+paths = ["demo", ]
+
+[tool.interrogate]
+ignore-init-module = true
+fail-under = 95
+verbose = 2
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
