@@ -11,7 +11,7 @@ toml = "^0.10.2"
 [tool.poetry.dev-dependencies]
 # Formatting
 black = "^19.10b0"
-isort = { version = "^4.3.0" , extras = ['toml']}
+isort = { version = "^5.0.0" , extras = ['toml']}
 seed-isort-config = "^2.1.0"
 
 # Testing
